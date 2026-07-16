@@ -99,9 +99,12 @@ Traditional constitutive equations are generally derived from phenomenological a
 
 Tensor Basis Neural Networks instead assume that the stress tensor can be expressed as
 
-\[
-\sigma=\sum_i a_i(\mathcal I)\,T_i
-\]
+$$
+\boldsymbol{\sigma}
+=
+\sum_{i=1}^{N}
+a_i(\mathcal{I})\,\mathbf{T}_i
+$$
 
 where
 
@@ -156,9 +159,9 @@ Each quantity is spatially coarse grained before temporal averaging.
 
 Computes
 
-\[
-\sigma(x,t)
-\]
+$$
+\boldsymbol{\sigma}(\mathbf{x},t)
+$$
 
 from DEM particle data.
 
@@ -174,9 +177,9 @@ stress_tensor.pt
 
 Computes
 
-\[
-u(x,t)
-\]
+$$
+\mathbf{u}(\mathbf{x},t)
+$$
 
 Outputs
 
@@ -204,10 +207,9 @@ strain_temporal_cg.pt
 
 Computes
 
-\[
-\phi(x,t)
-\]
-
+$$
+\phi(\mathbf{x},t)
+$$
 used by later constitutive models.
 
 ---
@@ -228,47 +230,72 @@ Advantages include
 
 The velocity field is differentiated to compute
 
-\[
-\nabla u
-\]
+$$
+\nabla\mathbf{u}
+$$
 
 which is decomposed into
 
 Symmetric part
 
-\[
-D=\frac12(\nabla u+\nabla u^T)
-\]
+$$
+\mathbf{D}
+=
+\frac{1}{2}
+\left(
+\nabla\mathbf{u}
++
+(\nabla\mathbf{u})^{T}
+\right)
+$$
 
 and antisymmetric part
 
-\[
-W=\frac12(\nabla u-\nabla u^T)
-\]
+$$
+\mathbf{W}
+=
+\frac{1}{2}
+\left(
+\nabla\mathbf{u}
+-
+(\nabla\mathbf{u})^{T}
+\right)
+$$
 
 Additional tensors are computed as
 
+Fabric Anisotropy Tensor
+
+$$
+A_{ij}
+=
+\frac{1}{N_c}
+\sum_{c=1}^{N_c}
+n_i^{(c)}
+n_j^{(c)}
+$$
+
 Material derivative
 
-\[
-\dot D
+$$
+\dot{\mathbf{D}}
 =
-\frac{\partial D}{\partial t}
+\frac{\partial\mathbf{D}}{\partial t}
 +
-u\cdot\nabla D
-\]
+\mathbf{u}\cdot\nabla\mathbf{D}
+$$
 
 and the Jaumann objective derivative
 
-\[
-D^\circ
+$$
+\mathbf{D}^{\circ}
 =
-\dot D
+\dot{\mathbf{D}}
 -
-WD
+\mathbf{W}\mathbf{D}
 +
-DW.
-\]
+\mathbf{D}\mathbf{W}
+$$
 
 These tensors form the basis for Model 3.
 
@@ -284,15 +311,15 @@ Four different constitutive formulations have been investigated.
 
 Constitutive equation
 
-\[
-\sigma
+$$
+\boldsymbol{\sigma}
 =
-a_0I
+a_0\mathbf{I}
 +
-a_1D
+a_1\mathbf{D}
 +
-a_2D^2.
-\]
+a_2\mathbf{D}^{2}
+$$
 
 Purpose
 
@@ -310,21 +337,25 @@ Features
 
 Constitutive equation
 
-\[
-\sigma
+$$
+\boldsymbol{\sigma}
 =
-a_1I
+a_1\mathbf{I}
 +
-a_2A
+a_2\mathbf{A}
 +
-a_3A^2.
-\]
+a_3\mathbf{A}^{2}
+$$
+
 
 where
 
-\(A\)
+$$
+\mathbf{A}
+$$
 
 is the coarse-grained fabric anisotropy tensor.
+
 
 Purpose
 
@@ -336,17 +367,17 @@ Investigates the predictive capability of microstructural anisotropy.
 
 Constitutive equation
 
-\[
-\sigma
+$$
+\boldsymbol{\sigma}
 =
--a_1I
+-a_1\mathbf{I}
 +
-a_2D
+a_2\mathbf{D}
 +
-a_3D^2
+a_3\mathbf{D}^{2}
 +
-a_4D^\circ.
-\]
+a_4\mathbf{D}^{\circ}
+$$
 
 This formulation follows the constitutive proposal of Nott.
 
@@ -365,19 +396,19 @@ are computed prior to training.
 
 Constitutive equation
 
-\[
-\sigma
+$$
+\boldsymbol{\sigma}
 =
-a_1I
+a_1\mathbf{I}
 +
-a_2A
+a_2\mathbf{A}
 +
-a_3A^2
+a_3\mathbf{A}^{2}
 +
-a_4D
+a_4\mathbf{D}
 +
-a_5D^2.
-\]
+a_5\mathbf{D}^{2}
+$$
 
 This combines kinematic information with microstructural anisotropy.
 
