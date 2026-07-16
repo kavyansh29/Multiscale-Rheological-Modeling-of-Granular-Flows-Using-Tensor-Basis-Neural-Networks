@@ -1,4 +1,4 @@
-# Tensor Basis Neural Networks for Granular Constitutive Modeling
+# Multiscale Rheological Modeling of Granular Flows Using Tensor Basis Neural Networks
 
 > A research repository for coarse-grained continuum modeling of dense granular flows using Tensor Basis Neural Networks (TBNNs), combining LAMMPS simulations, spatial-temporal coarse graining, tensorial feature extraction, and invariant-based machine learning.
 
@@ -34,14 +34,14 @@ The repository is intended for researchers working in
 
 ```
 .
+├── LAMMPS Simulation
+|
 ├── Coarse Graining
 │
 │   ├── Stress
 │   ├── Strain
 │   ├── Velocity and Deformation Tensors
 │   └── Volume Fraction
-│
-├── LAMMPS Simulation
 │
 └── TBNN
     ├── Model 1
@@ -79,7 +79,7 @@ Volume Fraction
           │
           ▼
 Tensor Construction
-(D, W, Ḋ, Dᵒ)
+(D, W, A, Ḋ, Dᵒ)
           │
           ▼
 Tensor Basis Generation
