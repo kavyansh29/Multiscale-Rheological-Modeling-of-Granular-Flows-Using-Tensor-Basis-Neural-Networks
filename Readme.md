@@ -265,12 +265,7 @@ Four different constitutive formulations have been investigated.
 
 Constitutive equation
 
-$$\boldsymbol{\sigma}
-=
-a_0\mathbf{I}
-+
-a_1\mathbf{D}
-+a_2\mathbf{D}^{2}$$
+$$\boldsymbol{\sigma}=a_0\mathbf{I}+a_1\mathbf{D}+a_2\mathbf{D}^{2}$$
 
 Purpose
 
@@ -288,13 +283,7 @@ Features
 
 Constitutive equation
 
-$$\boldsymbol{\sigma}
-=
-a_1\mathbf{I}
-+
-a_2\mathbf{A}
-+
-a_3\mathbf{A}^{2}$$
+$$\boldsymbol{\sigma}=a_1\mathbf{I}+a_2\mathbf{A}+a_3\mathbf{A}^{2}$$
 
 
 where
@@ -314,15 +303,7 @@ Investigates the predictive capability of microstructural anisotropy.
 
 Constitutive equation
 
-$$\boldsymbol{\sigma}
-=
--a_1\mathbf{I}
-+
-a_2\mathbf{D}
-+
-a_3\mathbf{D}^{2}
-+
-a_4\mathbf{D}^{\circ}$$
+$$\boldsymbol{\sigma}=-a_1\mathbf{I}+a_2\mathbf{D}+a_3\mathbf{D}^{2}+a_4\mathbf{D}^{\circ}$$
 
 This formulation follows the constitutive proposal of Nott.
 
@@ -341,17 +322,7 @@ are computed prior to training.
 
 Constitutive equation
 
-$$\boldsymbol{\sigma}
-=
-a_1\mathbf{I}
-+
-a_2\mathbf{A}
-+
-a_3\mathbf{A}^{2}
-+
-a_4\mathbf{D}
-+
-a_5\mathbf{D}^{2}$$
+$$\boldsymbol{\sigma}=a_1\mathbf{I}+a_2\mathbf{A}+a_3\mathbf{A}^{2}+a_4\mathbf{D}+a_5\mathbf{D}^{2}$$
 
 This combines kinematic information with microstructural anisotropy.
 
