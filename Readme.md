@@ -202,9 +202,7 @@ strain_temporal_cg.pt
 
 Computes
 
-$$
-\phi(\mathbf{x},t)
-$$
+$$\phi(\mathbf{x},t)$$
 used by later constitutive models.
 
 ---
@@ -233,64 +231,25 @@ which is decomposed into
 
 Symmetric part
 
-$$
-\mathbf{D}
-=
-\frac{1}{2}
-\left(
-\nabla\mathbf{u}
-+
-(\nabla\mathbf{u})^{T}
-\right)
-$$
+$$\mathbf{D}=\frac{1}{2}\left(\nabla\mathbf{u}+(\nabla\mathbf{u})^{T}\right)$$
 
 and antisymmetric part
 
-$$
-\mathbf{W}
-=
-\frac{1}{2}
-\left(
-\nabla\mathbf{u}
--
-(\nabla\mathbf{u})^{T}
-\right)
-$$
+$$\mathbf{W}=\frac{1}{2}\left(\nabla\mathbf{u}-(\nabla\mathbf{u})^{T}\right)$$
 
 Additional tensors are computed as
 
 Fabric Anisotropy Tensor
 
-$$
-A_{ij}
-=
-\frac{1}{N_c}
-\sum_{c=1}^{N_c}
-n_i^{(c)}
-n_j^{(c)}
-$$
+$$A_{ij}=\frac{1}{N_c}\sum_{c=1}^{N_c}n_i^{(c)}n_j^{(c)}$$
 
 Material derivative
 
-$$
-\dot{\mathbf{D}}
-=
-\frac{\partial\mathbf{D}}{\partial t}
-+
-\mathbf{u}\cdot\nabla\mathbf{D}
-$$
+$$\dot{\mathbf{D}}=\frac{\partial\mathbf{D}}{\partial t}+\mathbf{u}\cdot\nabla\mathbf{D}$$
 
 and the Jaumann objective derivative
 
-$$
-\mathbf{D}^{\circ}
-=
-\dot{\mathbf{D}}
--
-\mathbf{W}\mathbf{D}
-+
-\mathbf{D}\mathbf{W}
-$$
+$$\mathbf{D}^{\circ}=\dot{\mathbf{D}}-\mathbf{W}\mathbf{D}+\mathbf{D}\mathbf{W}$$
 
 These tensors form the basis for Model 3.
 
@@ -306,15 +265,12 @@ Four different constitutive formulations have been investigated.
 
 Constitutive equation
 
-$$
-\boldsymbol{\sigma}
+$$\boldsymbol{\sigma}
 =
 a_0\mathbf{I}
 +
 a_1\mathbf{D}
-+
-a_2\mathbf{D}^{2}
-$$
++a_2\mathbf{D}^{2}$$
 
 Purpose
 
@@ -332,22 +288,18 @@ Features
 
 Constitutive equation
 
-$$
-\boldsymbol{\sigma}
+$$\boldsymbol{\sigma}
 =
 a_1\mathbf{I}
 +
 a_2\mathbf{A}
 +
-a_3\mathbf{A}^{2}
-$$
+a_3\mathbf{A}^{2}$$
 
 
 where
 
-$$
-\mathbf{A}
-$$
+$$\mathbf{A}$$
 
 is the coarse-grained fabric anisotropy tensor.
 
@@ -362,8 +314,7 @@ Investigates the predictive capability of microstructural anisotropy.
 
 Constitutive equation
 
-$$
-\boldsymbol{\sigma}
+$$\boldsymbol{\sigma}
 =
 -a_1\mathbf{I}
 +
@@ -371,8 +322,7 @@ a_2\mathbf{D}
 +
 a_3\mathbf{D}^{2}
 +
-a_4\mathbf{D}^{\circ}
-$$
+a_4\mathbf{D}^{\circ}$$
 
 This formulation follows the constitutive proposal of Nott.
 
@@ -391,8 +341,7 @@ are computed prior to training.
 
 Constitutive equation
 
-$$
-\boldsymbol{\sigma}
+$$\boldsymbol{\sigma}
 =
 a_1\mathbf{I}
 +
@@ -402,8 +351,7 @@ a_3\mathbf{A}^{2}
 +
 a_4\mathbf{D}
 +
-a_5\mathbf{D}^{2}
-$$
+a_5\mathbf{D}^{2}$$
 
 This combines kinematic information with microstructural anisotropy.
 
