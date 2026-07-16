@@ -476,54 +476,48 @@ The repository intentionally separates
 into modular stages.
 
 This allows future constitutive models to reuse the generated continuum tensor fields without rerunning the DEM simulation.
-
 ---
 
 # Reproducibility
 
-The repository includes pretrained model checkpoints and intermediate `.pt` files required to reproduce the reported results without repeating computationally intensive preprocessing.
-
-Researchers interested in extending the work may directly use the stored continuum tensors or retrain the models using the provided scripts.
-
----
-
-# Future Work
-
-Potential extensions include
-
-- Additional objective derivatives
-- Three-dimensional granular flows
-- Graph Neural Networks
-- Physics-informed TBNNs
-- Alternative tensor bases
-- Generalization across loading paths
-- Experimental validation
-- Rate-independent constitutive formulations
+The repository includes pretrained model checkpoints and intermediate `.pt` files required to reproduce the reported results without repeating computationally intensive preprocessing. Researchers interested in extending the work may directly use the stored continuum tensor fields or retrain the models using the provided scripts.
 
 ---
 
 # Citation
 
-If you use this repository in academic work, please cite the associated publication (to be added upon publication).
+If you use this repository in academic work, please cite the repository and acknowledge the following author:
 
----
+**Kavyansh Raj Singh**  
+Department of Chemical Engineering  
+Indian Institute of Technology Indore, India
 
-# License
-
-The code is intended for academic research and educational use.
-
-A permissive open-source license such as the MIT License is recommended unless institutional or publication policies require otherwise.
+A formal citation associated with this work will be added upon publication.
 
 ---
 
 # Contact
 
-For questions regarding the implementation, methodology, or research, please open a GitHub Issue.
+For questions regarding the implementation, methodology, or research, please contact:
+
+**Kavyansh Raj Singh**  
+Department of Chemical Engineering  
+Indian Institute of Technology Indore, India
+
+📧 **Email:** kavyanshrajsingh29@gmail.com
 
 ---
 
 ## Acknowledgements
 
-This work was developed as part of research on constitutive modeling of dense granular materials using Tensor Basis Neural Networks and coarse-grained Discrete Element Method simulations.
+This repository was developed as part of a Summer Research Internship conducted at the **Department of Chemical Engineering, Indian Institute of Science (IISc), Bengaluru**, under the supervision of **Prof. Prabhu R. Nott**, during the period **1 June 2026 – 26 July 2026**.
 
-The repository integrates continuum mechanics, granular physics, and machine learning into a unified computational framework intended to facilitate reproducible research and future methodological extensions.
+The work presented here builds upon the foundational research carried out by **Thejus R. Vinod** as part of his **M.Tech thesis** in the same research group. The present repository extends that work through the development of additional coarse-graining methodologies, tensorial feature construction, and Tensor Basis Neural Network (TBNN) constitutive models for dense granular flows.
+
+The authors gratefully acknowledge the guidance, discussions, and research environment provided at IISc Bengaluru.
+
+---
+
+## Disclaimer
+
+This repository is intended solely for academic research, educational purposes, and the promotion of reproducible scientific computing. The interpretations, implementations, and software provided herein are part of ongoing research and should not be considered as official representations of the Indian Institute of Science (IISc), the Indian Institute of Technology Indore (IIT Indore), or any associated funding agency.
