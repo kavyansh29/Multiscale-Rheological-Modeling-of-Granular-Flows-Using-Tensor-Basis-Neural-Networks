@@ -305,7 +305,7 @@ Constitutive equation
 
 $$\boldsymbol{\sigma}=-a_1\mathbf{I}+a_2\mathbf{D}+a_3\mathbf{D}^{2}+a_4\mathbf{D}^{\circ}$$
 
-This formulation follows the constitutive proposal of Nott.
+This formulation follows the constitutive proposal of Prof. Nott.
 
 Additional tensors
 
@@ -492,7 +492,7 @@ If you use this repository in academic work, please cite the repository and ackn
 Department of Chemical Engineering  
 Indian Institute of Technology Indore, India
 
-A formal citation associated with this work will be added upon publication.
+A formal citation associated with this work will be added upon publication (if).
 
 ---
 
