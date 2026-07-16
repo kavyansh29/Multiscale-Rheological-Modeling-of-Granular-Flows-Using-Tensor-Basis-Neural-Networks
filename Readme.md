@@ -108,7 +108,7 @@ $$
 
 where
 
-- \(T_i\) are physically meaningful tensor basis functions
+- $$(T_i)$$ are physically meaningful tensor basis functions
 
 and
 
