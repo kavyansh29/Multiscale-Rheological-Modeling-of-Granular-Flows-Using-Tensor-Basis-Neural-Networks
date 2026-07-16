@@ -99,12 +99,7 @@ Traditional constitutive equations are generally derived from phenomenological a
 
 Tensor Basis Neural Networks instead assume that the stress tensor can be expressed as
 
-$$
-\boldsymbol{\sigma}
-=
-\sum_{i=1}^{N}
-a_i(\mathcal{I})\,\mathbf{T}_i
-$$
+$$\boldsymbol{\sigma}=\sum_{i=1}^{N}a_i(\mathcal{I})\,\mathbf{T}_i$$
 
 where
 
@@ -112,7 +107,7 @@ where
 
 and
 
-- \(a_i(\mathcal I)\) are scalar coefficient functions learned from simulation data.
+- $$(a_i(\mathcal I)\)$$ are scalar coefficient functions learned from simulation data.
 
 This architecture preserves objectivity and rotational invariance while allowing nonlinear constitutive behavior.
 
