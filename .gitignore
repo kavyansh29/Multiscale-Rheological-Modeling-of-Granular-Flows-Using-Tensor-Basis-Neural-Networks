@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# PyTorch models
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
+
+# LAMMPS restart files
+restart_*
